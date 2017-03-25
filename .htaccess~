@@ -1,0 +1,4 @@
+AuthUserFile /home/private/.htpasswd
+AuthType Basic
+AuthName "ALEXIE Beans"
+Require valid-user
