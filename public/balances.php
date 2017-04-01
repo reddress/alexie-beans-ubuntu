@@ -141,17 +141,17 @@ if ($type == "Expenses" && isset($_GET["start"])) {
 
 // MONTHLY BUDGET (monthly budget)
 "comm" => 30,  // cartoes aniv // [30] 30 claro, Vivo 25
-"groc" => 499,  // [variable] food, toiletries
+"groc" => 618,  // [variable] food, toiletries
 "med" => 400+150,   // [550] alex 400, meds ultrafarma, vitamins,
-"svc" => 360,   // [450] 360 or 450 (4 or 5 x 90) val mondays
-"tar" => 39,    // [39] banks, tarifa tesouro direto (?)
-"tr" => 104,    // [262] 50 or 100 bus + 162 fid 
+"svc" => 450,   // [450] 360 or 450 (4 or 5 x 90) val mondays
+"tar" => 40,    // [40] banks
+"tr" => 262,    // [262] 50 or 100 bus + 162 fid 
 
 // "ent" => 0,     // 
-"junk" => 100,  //
+"junk" => 50,  //
 "rest" => 100,  //
-"elec" => 40,               
-"livr" => 100,
+"elec" => 0,               
+"livr" => 0,
 
 ];
 
