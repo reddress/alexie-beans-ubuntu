@@ -158,7 +158,7 @@ if ($type == "Expenses" && isset($_GET["start"])) {
 
     if (isset($budget[$account_name]) && $budget[$account_name] > 0) {
 	$acct_budget = $budget[$account_name];
-	$budget_percentage = ceil($account_balances[$account_id] / $acct_budget) . "%";
+	$budget_percentage = ceil(ceil($account_balances[$account_id] / 100) / ($acct_budget / 100)) . "%";
 	$budget_total += $acct_budget;
     } else {
 	$acct_budget = 0;
