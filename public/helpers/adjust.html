@@ -1,0 +1,44 @@
+<body>
+    <p>
+        Compute the needed amount to adjust a balance. Use SINK as the balancing account.
+    </p>
+
+    Old balance: <input id="oldBal">
+    <br>
+    New balance: <input id="newBal">
+    <br><br>
+    <b>Adjustment:</b> <input id="adj" readonly>
+    <br>
+    <span id="debitWho"></span>
+    <br>
+    <button id="sel">Copy to Clipboard</button>
+    
+    <script>
+     var oldBal = document.getElementById("oldBal");
+     var newBal = document.getElementById("newBal");
+     var adj = document.getElementById("adj");
+     var debitWho = document.getElementById("debitWho");
+
+     function adjust() {
+         var diff = (parseFloat(newBal.value) - parseFloat(oldBal.value)).toFixed(2);
+         if (isNaN(diff)) {
+             adj.value = "";
+         } else {
+             adj.value = Math.abs(diff);
+         }
+         if (diff <= 0) {
+             debitWho.innerText = "Debit SINK";
+         } else {
+             debitWho.innerText = "Credit SINK";
+         }
+     }
+
+     oldBal.onkeyup = adjust;
+     newBal.onkeyup = adjust;
+
+     document.getElementById("sel").onclick = function () {
+         adj.select();
+         document.execCommand("copy");
+     };
+    </script>
+</body>
